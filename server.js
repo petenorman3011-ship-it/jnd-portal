@@ -129,6 +129,7 @@ app.post('/api/whatsapp-order', (req, res) => {
   res.json({ customer, order });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`JND Portal running on port ${PORT}`);
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`JND Portal running on port ${PORT} (0.0.0.0)`);
 });
+server.on('error', (err) => { console.error('Server error:', err); process.exit(1); });
