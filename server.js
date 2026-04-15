@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 function loadData() {
+  if (!fs.existsSync(DATA_FILE)) {
+    fs.writeFileSync(DATA_FILE, JSON.stringify({ customers: [], orders: [] }, null, 2));
+  }
   return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 }
 
