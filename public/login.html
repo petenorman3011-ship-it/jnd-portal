@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JND Portal — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0d2550 0%, #1a3f7a 50%, #0d2550 100%);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .login-card {
+      background: #fff; border-radius: 24px; padding: 48px 40px;
+      width: 100%; max-width: 420px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+    .logo-wrap { text-align: center; margin-bottom: 32px; }
+    .logo-wrap img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #e8f0fe; box-shadow: 0 4px 16px rgba(26,86,219,0.15); margin-bottom: 16px; }
+    .logo-wrap h1 { font-size: 22px; font-weight: 900; color: #1a1a2e; letter-spacing: -0.5px; }
+    .logo-wrap p { font-size: 13px; color: #888; margin-top: 4px; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #555; margin-bottom: 7px; }
+    .form-group input {
+      width: 100%; background: #f7faff; border: 1.5px solid #e8f0fe;
+      border-radius: 10px; padding: 14px 16px; font-size: 15px;
+      font-family: 'Inter', sans-serif; outline: none; color: #1a1a2e;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus { border-color: #1a56db; background: #fff; }
+
+    .login-btn {
+      width: 100%; background: linear-gradient(135deg, #1a56db, #0d2550);
+      color: #fff; padding: 16px; border-radius: 12px;
+      font-size: 16px; font-weight: 700; border: none; cursor: pointer;
+      transition: opacity 0.2s; margin-top: 8px;
+    }
+    .login-btn:hover { opacity: 0.9; }
+
+    .error-msg {
+      display: none; background: #fee2e2; color: #dc2626;
+      border-radius: 10px; padding: 12px 16px; font-size: 14px;
+      font-weight: 600; margin-bottom: 16px; text-align: center;
+    }
+
+    .footer-note { text-align: center; color: #aaa; font-size: 12px; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <div class="logo-wrap">
+      <img src="logo.jpg" alt="JND Logo"/>
+      <h1>James Norman</h1>
+      <p>Milktech Ltd · Business Portal</p>
+    </div>
+
+    <div class="error-msg" id="errorMsg">❌ Incorrect username or password</div>
+
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter your username" autocomplete="username"/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter') login()"/>
+    </div>
+    <button class="login-btn" onclick="login()">Sign in to Portal →</button>
+
+    <div class="footer-note">James Norman Milktech Ltd · Secure Portal</div>
+  </div>
+
+  <script>
+    const USERS = {
+      'james': 'jnd2026',
+      'admin': 'jndadmin',
+      'ben': 'jndben'
+    };
+
+    function login() {
+      const username = document.getElementById('username').value.trim().toLowerCase();
+      const password = document.getElementById('password').value.trim();
+      const err = document.getElementById('errorMsg');
+
+      if (USERS[username] && USERS[username] === password) {
+        sessionStorage.setItem('jnd_logged_in', 'true');
+        sessionStorage.setItem('jnd_user', username);
+        window.location.href = 'index.html';
+      } else {
+        err.style.display = 'block';
+        document.getElementById('password').value = '';
+      }
+    }
+
+    // If already logged in, go straight to portal
+    if (sessionStorage.getItem('jnd_logged_in') === 'true') {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

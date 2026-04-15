@@ -1,0 +1,382 @@
+{
+  "customers": [
+    {
+      "id": "cust001",
+      "name": "Sarah Johnson",
+      "businessName": "The Corner Café",
+      "phone": "07700111222",
+      "address": "14 High Street, Sunderland, SR1 1AB",
+      "type": "Café",
+      "createdAt": "2026-03-01T08:00:00.000Z"
+    },
+    {
+      "id": "cust002",
+      "name": "Mike Patel",
+      "businessName": "Patel's Convenience Store",
+      "phone": "07700333444",
+      "address": "82 Durham Road, Sunderland, SR3 4EF",
+      "type": "Shop / Convenience Store",
+      "createdAt": "2026-03-05T09:00:00.000Z"
+    },
+    {
+      "id": "cust003",
+      "name": "Linda Hayes",
+      "businessName": "Sunrise Care Home",
+      "phone": "07700555666",
+      "address": "6 Marlborough Avenue, Gateshead, NE8 2PQ",
+      "type": "Care Home",
+      "createdAt": "2026-03-10T07:30:00.000Z"
+    },
+    {
+      "id": "cust004",
+      "name": "Tom Barker",
+      "businessName": "The Harbour Restaurant",
+      "phone": "07700777888",
+      "address": "3 Quayside, Newcastle, NE1 3DE",
+      "type": "Restaurant",
+      "createdAt": "2026-03-12T10:00:00.000Z"
+    },
+    {
+      "id": "cust005",
+      "name": "Rachel Green",
+      "businessName": "Green's Bakery",
+      "phone": "07700999000",
+      "address": "27 Market Street, Durham, DH1 3NJ",
+      "type": "Café",
+      "createdAt": "2026-03-18T08:15:00.000Z"
+    },
+    {
+      "id": "cust006",
+      "name": "David Armstrong",
+      "businessName": "Armstrong's Hotel",
+      "phone": "07701122334",
+      "address": "55 Park Lane, Middlesbrough, TS1 2QR",
+      "type": "Hotel",
+      "createdAt": "2026-03-22T09:45:00.000Z"
+    },
+    {
+      "id": "cust007",
+      "name": "Carol Webb",
+      "businessName": "Meadow View Care Home",
+      "phone": "07701455667",
+      "address": "18 Elm Grove, Washington, NE38 7BT",
+      "type": "Care Home",
+      "createdAt": "2026-04-01T08:00:00.000Z"
+    },
+    {
+      "id": "cust008",
+      "name": "James Foster",
+      "businessName": "Foster's Fish & Chips",
+      "phone": "07701788990",
+      "address": "9 Sea Road, South Shields, NE33 2PH",
+      "type": "Restaurant",
+      "createdAt": "2026-04-05T11:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord001",
+      "customerId": "cust001",
+      "customerName": "The Corner Café",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (6 pint)",
+          "qty": 10
+        },
+        {
+          "product": "Double Cream (600ml)",
+          "qty": 4
+        },
+        {
+          "product": "Butter (250g)",
+          "qty": 6
+        }
+      ],
+      "notes": "Deliver before 6:30am please",
+      "status": "delivered",
+      "source": "whatsapp",
+      "createdAt": "2026-04-14T05:00:00.000Z",
+      "deliveredAt": "2026-04-14T06:20:00.000Z"
+    },
+    {
+      "id": "ord002",
+      "customerId": "cust003",
+      "customerName": "Sunrise Care Home",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (6 pint)",
+          "qty": 20
+        },
+        {
+          "product": "Skimmed Milk (6 pint)",
+          "qty": 10
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 4
+        },
+        {
+          "product": "Butter (500g)",
+          "qty": 8
+        }
+      ],
+      "notes": "Leave at side entrance",
+      "status": "delivered",
+      "source": "whatsapp",
+      "createdAt": "2026-04-14T05:15:00.000Z",
+      "deliveredAt": "2026-04-14T07:00:00.000Z"
+    },
+    {
+      "id": "ord003",
+      "customerId": "cust004",
+      "customerName": "The Harbour Restaurant",
+      "items": [
+        {
+          "product": "Double Cream (600ml)",
+          "qty": 8
+        },
+        {
+          "product": "Whipping Cream (600ml)",
+          "qty": 6
+        },
+        {
+          "product": "Butter (500g)",
+          "qty": 10
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 2
+        }
+      ],
+      "notes": "",
+      "status": "confirmed",
+      "source": "whatsapp",
+      "createdAt": "2026-04-14T06:30:00.000Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "ord004",
+      "customerId": "cust002",
+      "customerName": "Patel's Convenience Store",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (2L)",
+          "qty": 24
+        },
+        {
+          "product": "Skimmed Milk (2L)",
+          "qty": 12
+        },
+        {
+          "product": "Eggs (box of 12)",
+          "qty": 10
+        }
+      ],
+      "notes": "Call on arrival",
+      "status": "new",
+      "source": "whatsapp",
+      "createdAt": "2026-04-14T07:45:00.000Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "ord005",
+      "customerId": "cust005",
+      "customerName": "Green's Bakery",
+      "items": [
+        {
+          "product": "Butter (500g)",
+          "qty": 20
+        },
+        {
+          "product": "Double Cream (600ml)",
+          "qty": 10
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 3
+        }
+      ],
+      "notes": "",
+      "status": "new",
+      "source": "whatsapp",
+      "createdAt": "2026-04-14T08:10:00.000Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "ord006",
+      "customerId": "cust006",
+      "customerName": "Armstrong's Hotel",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (6 pint)",
+          "qty": 15
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 5
+        },
+        {
+          "product": "Butter (250g)",
+          "qty": 12
+        },
+        {
+          "product": "Whipping Cream (600ml)",
+          "qty": 8
+        }
+      ],
+      "notes": "Weekly standing order",
+      "status": "out-for-delivery",
+      "source": "portal",
+      "createdAt": "2026-04-14T08:30:00.000Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "ord007",
+      "customerId": "cust001",
+      "customerName": "The Corner Café",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (6 pint)",
+          "qty": 10
+        },
+        {
+          "product": "Double Cream (600ml)",
+          "qty": 4
+        }
+      ],
+      "notes": "",
+      "status": "delivered",
+      "source": "whatsapp",
+      "createdAt": "2026-04-13T05:30:00.000Z",
+      "deliveredAt": "2026-04-13T06:45:00.000Z"
+    },
+    {
+      "id": "ord008",
+      "customerId": "cust007",
+      "customerName": "Meadow View Care Home",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (6 pint)",
+          "qty": 18
+        },
+        {
+          "product": "Skimmed Milk (6 pint)",
+          "qty": 8
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 3
+        },
+        {
+          "product": "Butter (500g)",
+          "qty": 6
+        }
+      ],
+      "notes": "",
+      "status": "delivered",
+      "source": "whatsapp",
+      "createdAt": "2026-04-13T06:00:00.000Z",
+      "deliveredAt": "2026-04-13T07:30:00.000Z"
+    },
+    {
+      "id": "ord009",
+      "customerId": "cust008",
+      "customerName": "Foster's Fish & Chips",
+      "items": [
+        {
+          "product": "Butter (500g)",
+          "qty": 8
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 2
+        }
+      ],
+      "notes": "",
+      "status": "delivered",
+      "source": "whatsapp",
+      "createdAt": "2026-04-13T07:00:00.000Z",
+      "deliveredAt": "2026-04-13T08:15:00.000Z"
+    },
+    {
+      "id": "ord010",
+      "customerId": "cust003",
+      "customerName": "Sunrise Care Home",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (6 pint)",
+          "qty": 20
+        },
+        {
+          "product": "Eggs (tray of 30)",
+          "qty": 4
+        }
+      ],
+      "notes": "",
+      "status": "delivered",
+      "source": "whatsapp",
+      "createdAt": "2026-04-12T05:30:00.000Z",
+      "deliveredAt": "2026-04-12T07:00:00.000Z"
+    },
+    {
+      "id": "mo0bvutab7o7",
+      "customerId": "cust001",
+      "customerName": "The Corner Café",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (pint)",
+          "qty": 1
+        }
+      ],
+      "notes": "",
+      "status": "new",
+      "createdAt": "2026-04-15T17:32:28.222Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "mo0bxoesk5gs",
+      "customerId": "cust001",
+      "customerName": "The Corner Café",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (pint)",
+          "qty": 1
+        }
+      ],
+      "notes": "",
+      "status": "new",
+      "createdAt": "2026-04-15T17:33:53.236Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "mo0bxq4dxl43",
+      "customerId": "cust001",
+      "customerName": "The Corner Café",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (pint)",
+          "qty": 1
+        }
+      ],
+      "notes": "",
+      "status": "new",
+      "createdAt": "2026-04-15T17:33:55.453Z",
+      "deliveredAt": null
+    },
+    {
+      "id": "mo0bxrci8tcm",
+      "customerId": "cust001",
+      "customerName": "The Corner Café",
+      "items": [
+        {
+          "product": "Semi-Skimmed Milk (pint)",
+          "qty": 1
+        }
+      ],
+      "notes": "",
+      "status": "new",
+      "createdAt": "2026-04-15T17:33:57.042Z",
+      "deliveredAt": null
+    }
+  ]
+}
